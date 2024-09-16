@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "MachineStd";
+  src: url("/fonts/MachineStd.B4BONvne.otf") format("opentype");
+}
+
+body {
+  background: radial-gradient(circle at center top,#0a1c3a,#051122 900px,#051122);
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.custom-font {
+  font-family: "MachineStd", sans-serif;
+}
+
+.bg-dark-blue {
+  background-color: #0a1c3a;
+}
+
+.movie-poster {
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 4px;
+}
