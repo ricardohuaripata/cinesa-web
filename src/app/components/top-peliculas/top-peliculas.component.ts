@@ -2,10 +2,8 @@ import { isPlatformBrowser } from '@angular/common';
 import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
-  EventEmitter,
   Inject,
   OnInit,
-  Output,
   PLATFORM_ID,
   signal,
 } from '@angular/core';
@@ -23,7 +21,6 @@ import { Pelicula } from '../../interfaces/pelicula';
 })
 export class TopPeliculasComponent implements OnInit {
   swiperElement = signal<SwiperContainer | null>(null);
-  @Output() trailerSeleccionado = new EventEmitter<string>(); // Evento que emite la URL del trailer
   peliculas: Pelicula[] = [
     {
       titulo: 'DEADPOOL Y LOBEZNO',
@@ -91,7 +88,4 @@ export class TopPeliculasComponent implements OnInit {
     }
   }
 
-  seleccionarTrailer(trailerUrl: string) {
-    this.trailerSeleccionado.emit(trailerUrl); // Emitir la URL del trailer
-  }
 }

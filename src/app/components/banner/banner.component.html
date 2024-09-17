@@ -1,80 +1,17 @@
 <div class="container mx-auto max-w-screen-lg">
 
     <swiper-container id="banner-swiper" init="false">
+        @for (poster of posters; track $index) {
         <swiper-slide>
             <div class="relative">
-                <img src="https://www.cinesa.es/media/xmpjynsa/hero-banner-bitelchus.jpg?width=970&height=480&rxy=0.5%2C0.5"
-                    width="100%" height="auto">
+                <img [src]="poster.poster" width="100%" height="auto">
                 <div class="absolute top-1/2 translate-y-[-80%] z-10">
-                    <h1 class="text-4xl pl-5 pr-20 sm:text-6xl lg:text-8xl custom-font">Bitelchus
+                    <h1 class="text-4xl pl-5 pr-20 sm:text-6xl lg:text-8xl custom-font">{{poster.titulo}}
                     </h1>
                 </div>
                 <div class="absolute top-1/2 translate-y-[-0%] z-10 mx-5">
                     <br>
-                    <a href="/">
-                        <h2 class="text-sm px-5 py-2 sm:text-lg lg:text-xl border hover:bg-blue-700">
-                            ¡Ya en tu
-                            cine!</h2>
-                    </a>
-                </div>
-
-            </div>
-
-
-        </swiper-slide>
-        <swiper-slide>
-            <div class="relative">
-                <img src="https://www.cinesa.es/media/gnadli1b/banner-cinesa-1940x960-1.jpg?width=970&height=480&rxy=0.5%2C0.5"
-                    width="100%" height="auto">
-
-                <div class="absolute top-1/2 translate-y-[-80%] z-10">
-                    <h1 class="text-4xl pl-5 pr-20 sm:text-6xl lg:text-8xl custom-font">Odio el
-                        verano
-                    </h1>
-                </div>
-                <div class="absolute top-1/2 translate-y-[-0%] z-10 mx-5">
-                    <br>
-                    <a href="/">
-                        <h2 class="text-sm px-5 py-2 sm:text-lg lg:text-xl border hover:bg-blue-700">
-                            ¡Ya en tu
-                            cine!</h2>
-                    </a>
-                </div>
-
-            </div>
-        </swiper-slide>
-        <swiper-slide>
-            <div class="relative">
-                <img src="https://www.cinesa.es/media/jgwilrfy/hero-banner-joker.jpg?width=970&height=480&rxy=0.5%2C0.5"
-                    width="100%" height="auto">
-
-                <div class="absolute top-1/2 translate-y-[-80%] z-10">
-                    <h1 class="text-4xl pl-5 pr-20 sm:text-6xl lg:text-8xl custom-font">Joker: Folie
-                        a deux
-                    </h1>
-                </div>
-                <div class="absolute top-1/2 translate-y-[-0%] z-10 mx-5">
-                    <br>
-                    <a href="/">
-                        <h2 class="text-sm px-5 py-2 sm:text-lg lg:text-xl border hover:bg-blue-700">
-                            ¡Ya en tu
-                            cine!</h2>
-                    </a>
-                </div>
-            </div>
-        </swiper-slide>
-        <swiper-slide>
-            <div class="relative">
-                <img src="https://www.cinesa.es/media/t0vjgyxc/hero-banner-alien-romulus.jpg?width=970&height=480&rxy=0.5%2C0.5"
-                    width="100%" height="auto">
-                <div class="absolute top-1/2 translate-y-[-80%] z-10">
-                    <h1 class="text-4xl pl-5 pr-20 sm:text-6xl lg:text-8xl custom-font">Alien:
-                        Romulus
-                    </h1>
-                </div>
-                <div class="absolute top-1/2 translate-y-[-0%] z-10 mx-5">
-                    <br>
-                    <a href="/">
+                    <a href="#">
                         <h2 class="text-sm px-5 py-2 sm:text-lg lg:text-xl border hover:bg-blue-700">
                             ¡Ya en tu
                             cine!</h2>
@@ -84,27 +21,7 @@
             </div>
 
         </swiper-slide>
-        <swiper-slide>
+        }
 
-            <div class="relative">
-                <img src="https://www.cinesa.es/media/sfvcfkv2/hero-banner-transformers-one.jpg?width=970&height=480&rxy=0.5%2C0.5"
-                    width="100%" height="auto">
-
-                <div class="absolute top-1/2 translate-y-[-80%] z-10">
-                    <h1 class="text-4xl pl-5 pr-20 sm:text-6xl lg:text-8xl custom-font">Transformers
-                        one
-                    </h1>
-                </div>
-                <div class="absolute top-1/2 translate-y-[-0%] z-10 mx-5">
-                    <br>
-                    <a href="/">
-                        <h2 class="text-sm px-5 py-2 sm:text-lg lg:text-xl border hover:bg-blue-700">
-                            ¡Ya en tu
-                            cine!</h2>
-                    </a>
-                </div>
-            </div>
-
-        </swiper-slide>
     </swiper-container>
 </div>

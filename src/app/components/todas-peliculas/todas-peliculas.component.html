@@ -1,6 +1,6 @@
 <section class="mt-20">
-    <div class="flex justify-center mb-10">
-        <h1 class="text-2xl font-bold border-b-2 border-blue-700">TODAS LAS PELÍCULAS</h1>
+    <div class="flex justify-center text-center mb-10">
+        <h1 class="text-2xl font-bold">TODAS LAS PELÍCULAS</h1>
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 text-center custom-font">
@@ -10,13 +10,18 @@
                 <img [src]="pelicula.imagen" class="movie-poster" width="100%" height="100%">
 
                 <div class="absolute top-0 left-0">
-                    <button type="button" (click)="seleccionarTrailer(pelicula.trailer)" data-modal-target="video-modal"
-                        data-modal-toggle="video-modal" class="p-3 sm:p-4 bg-blue-600 hover:bg-blue-500"
-                        title="Ver trailer"> <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
-                        </svg></button>
+                    <a href="https://www.youtube.com/watch?v=9SzBZZhN0fQ" target="_blank">
+                        <button type="button" class="p-3 sm:p-4 bg-blue-600 hover:bg-blue-500"
+                            title="Ver trailer en Youtube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+                        </button>
+                    </a>
 
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { Pelicula } from '../../interfaces/pelicula';
 
 @Component({
@@ -9,7 +9,6 @@ import { Pelicula } from '../../interfaces/pelicula';
   styleUrl: './todas-peliculas.component.scss',
 })
 export class TodasPeliculasComponent {
-  @Output() trailerSeleccionado = new EventEmitter<string>(); // Evento que emite la URL del trailer
 
   peliculas: Pelicula[] = [
     {
@@ -86,7 +85,4 @@ export class TodasPeliculasComponent {
     },
   ];
 
-  seleccionarTrailer(trailerUrl: string) {
-    this.trailerSeleccionado.emit(trailerUrl); // Emitir la URL del trailer
-  }
 }

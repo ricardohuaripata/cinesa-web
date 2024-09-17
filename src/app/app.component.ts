@@ -5,7 +5,6 @@ import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TodasPeliculasComponent } from './components/todas-peliculas/todas-peliculas.component';
 import { TopPeliculasComponent } from './components/top-peliculas/top-peliculas.component';
-import { VideoPlayerComponent } from './components/video-player/video-player.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { initFlowbite } from 'flowbite';
 import { register } from 'swiper/element/bundle';
@@ -22,7 +21,6 @@ register();
     LoginComponent,
     TopPeliculasComponent,
     TodasPeliculasComponent,
-    VideoPlayerComponent,
   ],
   templateUrl: './app.component.html',
 })
