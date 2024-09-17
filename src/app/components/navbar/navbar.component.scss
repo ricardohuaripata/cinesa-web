@@ -1,0 +1,9 @@
+.nav-link {
+  @apply block text-lg py-2 px-3 hover:bg-gray-100 hover:text-blue-500 lg:hover:bg-transparent lg:hover:text-blue-500 lg:p-0;
+}
+
+@media (max-width: 1023px) {
+  .media-max-width-lg {
+      display: none;
+  }
+}

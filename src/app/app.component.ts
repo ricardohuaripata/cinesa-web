@@ -8,6 +8,7 @@ import { TopPeliculasComponent } from './components/top-peliculas/top-peliculas.
 import { BannerComponent } from './components/banner/banner.component';
 import { initFlowbite } from 'flowbite';
 import { register } from 'swiper/element/bundle';
+import { RegisterComponent } from "./components/register/register.component";
 register();
 
 @Component({
@@ -21,20 +22,14 @@ register();
     LoginComponent,
     TopPeliculasComponent,
     TodasPeliculasComponent,
-  ],
+    RegisterComponent
+],
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
-  trailer: string = '';
 
   ngOnInit(): void {
     initFlowbite();
   }
 
-  actualizarTrailer(url: string) {
-    this.trailer = url; // Actualiza la URL del trailer
-  }
-  cerrarVideoModal() {
-    this.trailer = ''; // Limpiar la URL del trailer
-  }
 }

@@ -1,0 +1,88 @@
+<!-- Main modal -->
+<div id="register-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[100%] max-h-full">
+    <div class="relative p-4 w-full max-w-2xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-dark-blue shadow">
+            <!-- Modal header -->
+
+            <div class="flex items-center justify-between p-4 md:p-5">
+                <button type="button"
+                    class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
+                    data-modal-hide="register-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+
+            <!-- Modal body -->
+
+            <div class="p-8 md:p-14">
+                <h1 class="text-2xl text-center mb-10">REGÍSTRATE EN MYCINESA</h1>
+                <p class="mb-10">Regalo de cumpleaños, Día del Socio, descuentos exclusivos, regalo de bienvenida...
+                    ¡Únete a un mundo
+                    de ventajas y vive el cine por menos!</p>
+
+                <form>
+                    <div class="relative z-0 mb-10">
+                        <input type="email" id="email" class="form-input peer" placeholder=" " required />
+                        <label for="email" class="form-label">Correo electrónico</label>
+                    </div>
+
+                    <div class="relative z-0 mb-10">
+                        <input type="password" id="password" class="form-input peer" placeholder=" " required />
+                        <label for="password" class="form-label">Contraseña</label>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row justify-between sm:gap-10">
+                        <div class="relative z-0 mb-10 w-full">
+                            <input type="text" id="name" class="form-input peer" placeholder=" " required />
+                            <label for="name" class="form-label">Nombre</label>
+                        </div>
+                        <div class="relative z-0 mb-10 w-full">
+                            <input type="text" id="lastname" class="form-input peer" placeholder=" " required />
+                            <label for="lastname" class="form-label">Apellidos</label>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row justify-between sm:gap-10">
+                        <div class="relative z-0 mb-10 w-full">
+                            <input type="date" id="birthday" class="form-input peer" placeholder=" " required />
+                            <label for="birthday" class="form-label">Fecha de nacimiento</label>
+                        </div>
+                        <div class="relative z-0 mb-10 w-full">
+                            <input type="tel" id="phoneNumber" class="form-input peer" placeholder=" " required />
+                            <label for="phoneNumber" class="form-label">Teléfono</label>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start mb-10">
+                        <div class="flex items-center h-5">
+                            <input id="remember" type="checkbox"
+                                class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300"
+                                required />
+                        </div>
+                        <label for="remember" class="ms-2 font-medium">
+                            <div class="v-display-text">Soy mayor de 14 años y acepto la <a target="_blank"
+                                    rel="noopener noreferrer" class="link"
+                                    href="https://www.cinesa.es/media/kyxffwor/220614-cinesa_politica_privacidad.pdf">Política
+                                    de Privacidad</a> y los <a target="_blank" rel="noopener noreferrer" class="link"
+                                    href="https://www.cinesa.es/media/f4mls2nb/220614-condiciones-generales-mycinesa.pdf">Términos
+                                    y Condiciones</a></div>
+                        </label>
+                    </div>
+
+                    <button class="px-5 py-3 mb-10 text-lg text-center bg-blue-600 w-full"
+                        type="submit">REGÍSTRARME</button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>

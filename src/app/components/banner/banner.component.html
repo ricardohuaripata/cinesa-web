@@ -4,7 +4,7 @@
         @for (poster of posters; track $index) {
         <swiper-slide>
             <div class="relative">
-                <img [src]="poster.poster" width="100%" height="auto">
+                <img [src]="poster.poster" width="100%" height="auto" class="slide-banner-image">
                 <div class="absolute top-1/2 translate-y-[-80%] z-10">
                     <h1 class="text-4xl pl-5 pr-20 sm:text-6xl lg:text-8xl custom-font">{{poster.titulo}}
                     </h1>

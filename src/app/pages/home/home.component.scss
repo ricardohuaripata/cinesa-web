@@ -7,3 +7,8 @@
   height: 100%;
   background-image: linear-gradient(90deg, #051122b3, #000000b3 27%, #0000 65%);
 }
+
+.promo-image {
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
