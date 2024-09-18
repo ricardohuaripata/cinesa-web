@@ -4,6 +4,7 @@ import { PeliculasComponent } from './pages/peliculas/peliculas.component';
 import { CinesComponent } from './pages/cines/cines.component';
 import { PromocionesComponent } from './pages/promociones/promociones.component';
 import { ExperienciasComponent } from './pages/experiencias/experiencias.component';
+import { ProgramasComponent } from './pages/programas/programas.component';
 
 export const routes: Routes = [
   {
@@ -30,6 +31,11 @@ export const routes: Routes = [
     path: 'experiencias',
     component: ExperienciasComponent,
     title: 'Salas premium, productos de bar, Cinesa LUXE y más | Cinesa',
+  },
+  {
+    path: 'programas',
+    component: ProgramasComponent,
+    title: 'Programas | Cinesa',
   },
   {
     path: '**',

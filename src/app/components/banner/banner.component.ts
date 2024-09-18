@@ -4,13 +4,14 @@ import {
   OnInit,
   signal,
 } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { SwiperContainer } from 'swiper/element';
 import { SwiperOptions } from 'swiper/types';
 
 @Component({
   selector: 'app-banner',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './banner.component.html',
   styleUrl: './banner.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
