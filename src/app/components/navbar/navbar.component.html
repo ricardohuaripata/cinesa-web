@@ -1,4 +1,4 @@
-<nav class="w-full z-20 top-0 start-0 mb-10">
+<nav class="w-full z-20 top-0 start-0">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4" style="min-height: 72px;">
 
         <a routerLink="/" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -34,19 +34,19 @@
             <ul
                 class="flex flex-col font-medium p-4 lg:p-0 mt-4 lg:mt-0 lg:space-x-4 xl:space-x-10 rtl:space-x-reverse lg:flex-row">
                 <li>
-                    <a routerLink="/cines" class="nav-link">Cines</a>
+                    <a routerLink="/cines" class="nav-link" [routerLinkActive]="['active-route']">Cines</a>
                 </li>
                 <li>
-                    <a routerLink="/peliculas" class="nav-link">Películas</a>
+                    <a routerLink="/peliculas" class="nav-link" [routerLinkActive]="['active-route']">Películas</a>
                 </li>
                 <li>
-                    <a routerLink="/promociones" class="nav-link">Promociones</a>
+                    <a routerLink="/promociones" class="nav-link" [routerLinkActive]="['active-route']">Promociones</a>
                 </li>
                 <li>
-                    <a routerLink="/experiencias" class="nav-link">Experiencias</a>
+                    <a routerLink="/experiencias" class="nav-link" [routerLinkActive]="['active-route']">Experiencias</a>
                 </li>
                 <li>
-                    <a routerLink="/programas" class="nav-link">Programas</a>
+                    <a routerLink="/programas" class="nav-link" [routerLinkActive]="['active-route']">Programas</a>
                 </li>
                 <li class="lg:hidden">
                     <div class="flex flex-wrap">

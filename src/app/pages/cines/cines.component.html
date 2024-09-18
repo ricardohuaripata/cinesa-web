@@ -1,1 +1,39 @@
-<p>cines works!</p>
+<div class="container">
+
+    <div class="relative w-full h-[300px] md:h-[500px]">
+        <img src="https://www.cinesa.es/media/w4xdfpnd/banner-cines.jpg?width=1900&height=500&v=1d9caa0c61540c0"
+            class="object-cover w-full h-full" alt="Banner image">
+
+    </div>
+
+    <section class="max-w-screen-xl mx-auto mt-20 px-5">
+        <div class="flex justify-center text-center mb-10">
+            <h1 class="text-2xl sm:text-3xl font-semibold">CINES
+            </h1>
+        </div>
+
+        <div class="relative z-0 mb-10">
+            <input type="text" id="cinemaSearch" class="form-input peer" placeholder=" " [(ngModel)]="searchQuery"/>
+            <label for="cinemaSearch" class="form-label">Escribe aquí tu cine</label>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+            @for (cine of filteredCines; track $index) {
+                <div class="flex flex-col hover:text-blue-500 hover:cursor-pointer" routerLink="/">
+
+                    <img [src]="cine.imagen" width="100%" height="auto" class="cine-image" />
+    
+                    <div class="flex flex-col justify-between h-full mt-5">
+    
+                        <h1 class="text-4xl custom-font">{{cine.nombre}}</h1>
+                        <p class="sm:text-lg">{{cine.ubicacion}}</p>
+    
+                    </div>        
+                </div>        
+            }
+
+        </div>
+
+    </section>
+
+</div>
