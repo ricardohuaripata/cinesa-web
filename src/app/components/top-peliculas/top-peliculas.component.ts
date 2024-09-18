@@ -1,10 +1,7 @@
-import { isPlatformBrowser } from '@angular/common';
 import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
-  Inject,
   OnInit,
-  PLATFORM_ID,
   signal,
 } from '@angular/core';
 import { SwiperContainer } from 'swiper/element';
@@ -25,67 +22,58 @@ export class TopPeliculasComponent implements OnInit {
     {
       titulo: 'DEADPOOL Y LOBEZNO',
       imagen: 'images/deadpool3.jpg',
-      trailer:
-        'https://res.cloudinary.com/dmravgyts/video/upload/v1726444315/Bitelch%C3%BAs_Bitelch%C3%BAs___Tr%C3%A1iler_Oficial_2_1080p_h264_youtube_pwhs6n.mp4',
+      trailer: 'https://www.youtube.com/watch?v=rrgsj6S0_4A',
     },
     {
       titulo: 'BITELCHÚS',
       imagen: 'images/bitelchus.jpg',
-      trailer:
-        'https://res.cloudinary.com/dmravgyts/video/upload/v1726444315/Bitelch%C3%BAs_Bitelch%C3%BAs___Tr%C3%A1iler_Oficial_2_1080p_h264_youtube_pwhs6n.mp4',
+      trailer: 'https://www.youtube.com/watch?v=9SzBZZhN0fQ',
     },
     {
       titulo: 'WICKED',
       imagen: 'images/wicked.jpg',
-      trailer:
-        'https://res.cloudinary.com/dmravgyts/video/upload/v1726444315/Bitelch%C3%BAs_Bitelch%C3%BAs___Tr%C3%A1iler_Oficial_2_1080p_h264_youtube_pwhs6n.mp4',
+      trailer: 'https://www.youtube.com/watch?v=UNHQgy3jawI',
     },
     {
       titulo: 'TRANSFORMERS ONE',
       imagen: 'images/transformers.jpg',
-      trailer:
-        'https://res.cloudinary.com/dmravgyts/video/upload/v1726444315/Bitelch%C3%BAs_Bitelch%C3%BAs___Tr%C3%A1iler_Oficial_2_1080p_h264_youtube_pwhs6n.mp4',
+      trailer: 'https://www.youtube.com/watch?v=tc65fp8aGS8',
     },
     {
       titulo: 'JOKER: FOLIE A DEUX',
       imagen: 'images/joker-2.jpg',
-      trailer:
-        'https://res.cloudinary.com/dmravgyts/video/upload/v1726444315/Bitelch%C3%BAs_Bitelch%C3%BAs___Tr%C3%A1iler_Oficial_2_1080p_h264_youtube_pwhs6n.mp4',
+      trailer: 'https://www.youtube.com/watch?v=QtZPjL_CbQI&t',
     },
   ];
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor() {}
 
   ngOnInit(): void {
-    // Verificar si estamos en el navegador (cliente)
-    if (isPlatformBrowser(this.platformId)) {
-      const swiperElemConstructor = document.querySelector(
-        '#top-peliculas-swiper'
-      );
-      const swiperOptions: SwiperOptions = {
-        slidesPerView: 2,
-        loop: true,
-        autoplay: {
-          delay: 1500,
+    const swiperElemConstructor = document.querySelector(
+      '#top-peliculas-swiper'
+    );
+    const swiperOptions: SwiperOptions = {
+      slidesPerView: 2,
+      loop: true,
+      autoplay: {
+        delay: 1500,
+      },
+      spaceBetween: 40,
+      grabCursor: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
         },
-        spaceBetween: 40,
-        grabCursor: true,
-        breakpoints: {
-          768: {
-            slidesPerView: 3,
-          },
-          1024: {
-            slidesPerView: 4,
-          },
+        1024: {
+          slidesPerView: 4,
         },
-      };
+      },
+    };
 
-      if (swiperElemConstructor) {
-        Object.assign(swiperElemConstructor, swiperOptions);
-        this.swiperElement.set(swiperElemConstructor as SwiperContainer);
-        this.swiperElement()?.initialize();
-      }
+    if (swiperElemConstructor) {
+      Object.assign(swiperElemConstructor, swiperOptions);
+      this.swiperElement.set(swiperElemConstructor as SwiperContainer);
+      this.swiperElement()?.initialize();
     }
   }
-
 }

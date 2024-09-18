@@ -33,30 +33,20 @@
         <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
             <ul
                 class="flex flex-col font-medium p-4 lg:p-0 mt-4 lg:mt-0 lg:space-x-4 xl:space-x-10 rtl:space-x-reverse lg:flex-row">
+                @for (pagina of paginas; track $index) {
                 <li>
-                    <a routerLink="/cines" class="nav-link" [routerLinkActive]="['active-route']">Cines</a>
+                    <a [routerLink]="pagina.ruta" class="nav-link"
+                        [routerLinkActive]="['active-route']">{{pagina.nombre}}</a>
                 </li>
-                <li>
-                    <a routerLink="/peliculas" class="nav-link" [routerLinkActive]="['active-route']">Películas</a>
-                </li>
-                <li>
-                    <a routerLink="/promociones" class="nav-link" [routerLinkActive]="['active-route']">Promociones</a>
-                </li>
-                <li>
-                    <a routerLink="/experiencias" class="nav-link" [routerLinkActive]="['active-route']">Experiencias</a>
-                </li>
-                <li>
-                    <a routerLink="/programas" class="nav-link" [routerLinkActive]="['active-route']">Programas</a>
-                </li>
+
+                }
                 <li class="lg:hidden">
                     <div class="flex flex-wrap">
-                        <button data-modal-target="login-modal" data-modal-toggle="login-modal"
-                            type="button">
+                        <button data-modal-target="login-modal" data-modal-toggle="login-modal" type="button">
                             <p class="nav-link">Inicia sesión</p>
                         </button>
 
-                        <button data-modal-target="register-modal" data-modal-toggle="register-modal"
-                            type="button">
+                        <button data-modal-target="register-modal" data-modal-toggle="register-modal" type="button">
                             <p class="nav-link">Regístrate</p>
                         </button>
                     </div>

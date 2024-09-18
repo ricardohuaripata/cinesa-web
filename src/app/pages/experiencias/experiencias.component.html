@@ -1,0 +1,181 @@
+<div class="container">
+
+    <div class="relative w-full h-[300px] md:h-[500px]">
+        <img src="https://www.cinesa.es/media/rqddklbc/cabecera-experiencias.jpg?width=1900&height=500&v=1dafa2103d6e250"
+            class="object-cover w-full h-full" alt="Banner image">
+
+    </div>
+
+    <div class="max-w-screen-xl mx-auto px-5 mt-20">
+
+        <div>
+            <div class="flex justify-center text-center mb-5">
+                <h1 class="text-4xl sm:text-5xl font-semibold">Disfruta de las mejores experiencias en Cinesa</h1>
+            </div>
+
+            <p class="text-lg">Conoce todos los detalles de las salas de cine premium más exclusivas y adéntrate en los
+                lujosos Cinesa LUXE. Maravíllate con la gran oferta de sesiones en versión original y déjate mimar por
+                los productos de bar más selectos. Todo a tu alcance para hacer de tu visita al cine una experiencia
+                única.</p>
+
+        </div>
+
+        <section class="mt-20">
+
+            <div class="flex justify-center text-center mb-10">
+                <h1 class="text-2xl sm:text-3xl font-semibold">¿CONOCES TODAS LAS SALAS PREMIUM?
+                </h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                @for (sala of salas; track $index) {
+                <div class="flex flex-col">
+
+                    <img [src]="sala.imagen" width="100%" height="auto" class="sala-image" />
+
+                    <div class="flex flex-col justify-between gap-5 h-full mt-5">
+
+                        <h1 class="text-4xl custom-font">{{sala.nombre}}</h1>
+                        <p class="sm:text-lg">{{sala.descripcion}}</p>
+                        <div> <a [routerLink]="sala.enlace" class="link sm:text-lg">Descubre la sala
+                                {{sala.nombre}}</a>
+                        </div>
+
+                    </div>
+                </div>
+                }
+
+            </div>
+
+
+        </section>
+
+
+        <section class="mt-20">
+
+            <div class="flex justify-center text-center mb-10">
+                <h1 class="text-2xl sm:text-3xl font-semibold">MYCINESA TERROR Y SUSPENSE
+                </h1>
+            </div>
+
+            <div class="banner-image relative w-full h-[350px] md:h-[420px]">
+                <img src="https://www.cinesa.es/media/s5yj41dz/promo-banner-tys-sept.jpg?height=420"
+                    class="object-cover w-full h-full" alt="Banner image">
+                <div class="absolute top-1/2 translate-y-[-50%] z-10">
+                    <div class="px-5 max-w-96">
+                        <h1 class="text-2xl mb-4">Terror y Suspense
+                        </h1>
+                        <p class="mb-4">¿Quieres pasar miedo? ¿Te apasionan los thrillers? ¡Entonces este es tu sitio!
+                            Bienvenido a nuestro nuevo programa de Terror y Suspense, exclusivo para miembros myCinesa,
+                            donde podrás encontrar contenidos, premios y ofertas únicas para los mayores fans del miedo
+                            y la intriga. </p>
+
+
+                        <a routerLink="/" class="inline-flex items-center text-lg link">
+                            ¿Te atreves?
+                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="mt-20">
+            <div class="flex justify-center text-center mb-10">
+                <h1 class="text-2xl sm:text-3xl font-semibold">PELÍCULAS EN VERSIÓN ORIGINAL</h1>
+            </div>
+
+            <div class="banner-image relative w-full h-[350px] md:h-[420px]">
+                <img src="https://www.cinesa.es/media/5dxbfzmk/cabecera-2880x600-sep2024.jpg?height=420"
+                    class="object-cover w-full h-full" alt="Banner image">
+                <div class="absolute top-1/2 translate-y-[-50%] z-10">
+                    <div class="px-5 max-w-96">
+                        <h1 class="text-2xl mb-4">¿Prefieres ver las películas en versión original?
+
+                        </h1>
+                        <p class="mb-4">Bitelchús Bitelchús, No hables con extraños... En Cinesa, encontrarás tus
+                            títulos
+                            preferidos también en Versión Original Subtitulada al Español.</p>
+
+                        <a routerLink="/" class="inline-flex items-center text-lg link">
+                            Más información sobre VOSE
+                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="mt-20">
+            <div class="flex justify-center text-center mb-10">
+                <h1 class="text-2xl sm:text-3xl font-semibold">ES NUESTRO CINE</h1>
+            </div>
+
+            <div class="banner-image relative w-full h-[350px] md:h-[420px]">
+                <img src="https://www.cinesa.es/media/nmvkuvlv/buffalo-banner-nuestro-cine-blog.jpg?height=420"
+                    class="object-cover w-full h-full" alt="Banner image">
+                <div class="absolute top-1/2 translate-y-[-50%] z-10">
+                    <div class="px-5 max-w-96">
+                        <h1 class="text-2xl mb-4">Es Nuestro Cine
+                        </h1>
+                        <p class="mb-4">El cine es parte del pasado y del presente de nuestra cultura. Celebramos el
+                            cine local dando soporte a producciones en español, catalán, gallego y euskera. Aquí
+                            encontrarás contenido, premios y ofertas que te harán amar aún más la industria
+                            cinematográfica local.</p>
+
+                        <a routerLink="/" class="inline-flex items-center text-lg link">
+                            Explora Es Nuestro Cine
+                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="mt-20">
+            <div class="flex justify-center text-center mb-10">
+                <h1 class="text-2xl sm:text-3xl font-semibold">PRODUCTOS DE BAR</h1>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-[4fr_6fr] gap-10">
+                <div>
+                    <h5 class="text-2xl font-semibold tracking-tight mb-5">Los productos de bar más selectos para acompañar tu película favorita</h5>
+                    <p class="text-lg mb-5">Convierte tu visita a Cinesa en una fantástica experiencia gastronómica con nuestra selección de los snacks más exclusivos para el cine. Disfruta de unos nachos, unos perritos calientes, unas tiras de pollo o comparte las mejores palomitas con tu cita. No te pierdas ninguno de nuestros menús especiales y una gran cantidad de ofertas para acompañar a tu película favorita.</p>
+                    <button class="button text-lg font-medium" routerLink="/">Saborea el cine</button>
+                </div>
+                <div> <img src="https://www.cinesa.es/media/43oh4gop/descubre-los-productos-de-bar-cinesa.jpg"
+                        width="100%" height="auto" class="bar-image" />
+                </div>
+            </div>
+
+
+
+        </section>
+
+    </div>
+
+
+
+</div>
