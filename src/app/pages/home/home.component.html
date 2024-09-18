@@ -9,7 +9,7 @@
             <h1 class="text-2xl sm:text-3xl font-semibold">DESCUBRE NUESTRAS SALAS PREMIUM</h1>
         </div>
 
-        <div class="promo-banner-image relative w-full h-[350px] md:h-[420px]">
+        <div class="banner-image relative w-full h-[350px] md:h-[420px]">
             <img src="https://www.cinesa.es/media/13ahqn3r/banner-plf-1324x420.jpg?height=420"
                 class="object-cover w-full h-full" alt="Banner image">
             <div class="absolute top-1/2 translate-y-[-50%] z-10">
@@ -36,7 +36,7 @@
             <h1 class="text-2xl sm:text-3xl font-semibold">PELÍCULAS EN VERSIÓN ORIGINAL</h1>
         </div>
 
-        <div class="promo-banner-image relative w-full h-[350px] md:h-[420px]">
+        <div class="banner-image relative w-full h-[350px] md:h-[420px]">
             <img src="https://www.cinesa.es/media/5dxbfzmk/cabecera-2880x600-sep2024.jpg?height=420"
                 class="object-cover w-full h-full" alt="Banner image">
             <div class="absolute top-1/2 translate-y-[-50%] z-10">
@@ -79,7 +79,7 @@
                         <p class="mb-5 text-lg text-gray-700">{{promocion.finalizacion}}</p>
                     </div>
 
-                    <div> <a [href]="promocion.enlace"
+                    <div> <a [routerLink]="promocion.enlace"
                             class="inline-flex items-center text-center text-lg font-medium link">
                             ¡Participar!
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"

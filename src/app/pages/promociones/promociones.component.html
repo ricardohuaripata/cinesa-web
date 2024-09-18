@@ -6,5 +6,25 @@
 
     </div>
 
+    <section class="max-w-screen-xl mx-auto mt-20 px-5">
+
+        @for (promocion of promociones; track $index) {
+        <div class="grid grid-cols-1 lg:grid-cols-[4fr_6fr_2fr] gap-10 mb-10 pb-10 border-b border-gray-600">
+            <img [src]="promocion.imagen" width="100%" height="auto" class="promo-image" />
+
+            <div class="flex flex-col justify-between gap-5 h-full">
+                <h5 class="text-2xl font-semibold tracking-tight">{{promocion.titulo}}</h5>
+                <p class="text-lg">{{promocion.descripcion}}</p>
+                <p class="text-lg text-gray-400">{{promocion.finalizacion}}</p>
+
+            </div>
+
+            <div class="flex items-center"><button class="button w-full text-lg font-medium" [routerLink]="promocion.enlace">¡Participar!</button></div>
+
+        </div>
+
+        }
+
+    </section>
 
 </div>

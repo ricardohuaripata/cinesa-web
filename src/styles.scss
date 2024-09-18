@@ -31,6 +31,10 @@ body {
   @apply text-blue-500 hover:text-blue-400;
 }
 
+.button {
+  @apply px-10 py-3 bg-blue-600 hover:bg-blue-500;
+}
+
 .square-button {
   @apply p-3 sm:p-4 bg-blue-600 hover:bg-blue-500;
 }
@@ -41,4 +45,9 @@ body {
 
 .form-label {
   @apply absolute text-gray-400 duration-300 transform -translate-y-6 top-0 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto;
+}
+
+.promo-image {
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
 }
